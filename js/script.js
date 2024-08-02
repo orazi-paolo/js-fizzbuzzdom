@@ -7,3 +7,8 @@
 6. riempi il contenitore con degli elementi via js
 7. applica stili differenti agli elementi aggiunti a seconda del valore inserito che sia un fizz un numero o un buzz
 */
+
+// stampo i numeri da uno a 100 in console
+for (let i = 1; i <= 100; i++) {
+    console.log(i)
+}
