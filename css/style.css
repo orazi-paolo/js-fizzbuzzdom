@@ -3,12 +3,24 @@ p{
     justify-content: center;
     align-items: center;
     height: 150px;
-    gap: 10px;
-    width: calc((100% / 7) - (60px / 7));
+    margin-right: 10px;
+    width: calc((100% / 7) - (70px / 7));
 }
-
 
 /* utils */
 .bg-blue{
     background-color: blue;
+}
+
+.bg-light-blue{
+    background-color: lightblue;
+}
+.bg-aquamarine{
+    background-color: #0bd6a1;
+}
+.bg-yellow{
+    background-color: yellow;
+}
+.bg-red{
+    background-color: red;
 }

@@ -37,6 +37,21 @@ for (let i = 1; i <= 100; i++) {
     let p = document.createElement('p');
     p.innerText = result;
 
+    // metto i background
+
+    if (i % 3 === 0 && i % 5 === 0) {
+        p.classList.add('bg-light-blue');
+        
+      } else if (i % 3 === 0) {
+        p.classList.add('bg-aquamarine');
+  
+      } else if (i % 5 === 0) {
+        p.classList.add('bg-yellow');
+      
+      } else {
+        p.classList.add('bg-red')
+      }
+
     // lo metto come figlio al div
     containerDom.appendChild(p);
 
