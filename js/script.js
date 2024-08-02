@@ -8,19 +8,36 @@
 7. applica stili differenti agli elementi aggiunti a seconda del valore inserito che sia un fizz un numero o un buzz
 */
 
+
+// recupero gli elementi dal dom
+let containerDom = document.getElementById('containerDom');
+
 // stampo i numeri da uno a 100 in console
 for (let i = 1; i <= 100; i++) {
+    // imposto una variabile per il risultato
+    let result;
+
     // se i numeri sono sia multipli di 3 e di 5 stampo FizzBuzz
     if (i % 3 === 0 && i % 5 === 0) {
-      console.log('FizzBuzz');
-    //   se i numeri sono multipli di 3 stampo fizz
+      result = 'FizzBuzz';
+
+    // se i numeri sono multipli di 3 stampo fizz
     } else if (i % 3 === 0) {
-      console.log('Fizz');
-    //   se i numeri sono multipli di 5 stampo buzz
+      result = 'Fizz';
+
+    // se i numeri sono multipli di 5 stampo buzz
     } else if (i % 5 === 0) {
-      console.log('Buzz');
-    //   altrimenti
+      result = 'Buzz';
+    
+    // altrimenti
     } else {
-      console.log(i);
+      result = i;
     }
+    // creo un elemento p per mettero nel div principale
+    let p = document.createElement('p');
+    p.innerText = result;
+
+    // lo metto come figlio al div
+    containerDom.appendChild(p);
+
   }
