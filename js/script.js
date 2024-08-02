@@ -17,42 +17,33 @@ for (let i = 1; i <= 100; i++) {
     // imposto una variabile per il risultato
     let result;
 
+    // creo un elemento p per mettero nel div principale
+    let p = document.createElement('p');
+
     // se i numeri sono sia multipli di 3 e di 5 stampo FizzBuzz
     if (i % 3 === 0 && i % 5 === 0) {
       result = 'FizzBuzz';
+      p.classList.add('bg-light-blue');
 
     // se i numeri sono multipli di 3 stampo fizz
     } else if (i % 3 === 0) {
       result = 'Fizz';
+      p.classList.add('bg-aquamarine');
 
     // se i numeri sono multipli di 5 stampo buzz
     } else if (i % 5 === 0) {
       result = 'Buzz';
+      p.classList.add('bg-yellow');
     
     // altrimenti
     } else {
       result = i;
+      p.classList.add('bg-red')
     }
-    // creo un elemento p per mettero nel div principale
-    let p = document.createElement('p');
+    
+    // inserisco il risultato in p
     p.innerText = result;
-
-    // metto i background
-
-    if (i % 3 === 0 && i % 5 === 0) {
-        p.classList.add('bg-light-blue');
-        
-      } else if (i % 3 === 0) {
-        p.classList.add('bg-aquamarine');
-  
-      } else if (i % 5 === 0) {
-        p.classList.add('bg-yellow');
-      
-      } else {
-        p.classList.add('bg-red')
-      }
 
     // lo metto come figlio al div
     containerDom.appendChild(p);
-
   }
